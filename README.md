@@ -14,7 +14,7 @@ This is for users that need to keep track of a lot of information, it’s easy t
 
 * To start using the application, open your browser and go to
   
-  `http://localhost:3000/`
+  `http://localhost:3001/`
 
 * screenshot of application
 ![](./public/assets/note-taker.png)
