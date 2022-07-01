@@ -4,7 +4,7 @@ const path = require('path');
 
 //set up express app
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 
 //sets up the express app to handle data parsing
@@ -19,5 +19,5 @@ require("./routes/htmlRoutes")(app);
 
 //starts server to begin listening
 app.listen(PORT,function(){
-    console.log("APP listening on PORT" + PORT);
+    console.log(`APP listening on PORT ${PORT}`);
 });
