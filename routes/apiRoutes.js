@@ -32,5 +32,32 @@ module.exports = function (app) {
             res.json(notes);
         });
     });
+    // DELETE /api/notes/:id - Should receive a query parameter containing the id of a note to delete. This means you'll need to find a way to give each note a unique id when it's saved. In order to delete a note, you'll need to read all notes from the db.json file, remove the note with the given id property, and then rewrite the notes to the db.json file.
+    app.delete("/api/notes/:id", function (req, res) {
+        fs.readFile("db/db.json", "utf8", (err, data) => {
+            if (err) throw err;
+
+            let notes = JSON.parse(data);
+            // let notes = JSON.parse(notesData);
+            let notesId = req.params.id;
+            let newNotesId = 0;
+
+            notes = notes.filter(currNote => {
+                return currNote.id != notesId;
+            });
+
+            for (currNote of notes) {
+                currNote.id = newNotesId.toString();
+                newNotesId++;
+            }
+
+            fs.writeFileSync("db/db.json", JSON.stringify(notes), "utf8", (err, data) => {
+                if (err) throw err;
+                console.log("Success!");
+            });
+
+            res.json(notes);
+        });
+    });
 
 }
