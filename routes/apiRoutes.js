@@ -11,4 +11,26 @@ module.exports = function (app) {
             let notes = JSON.parse(data);
         });
     });
+    //post/api/notes - should receive a new note to save on the request body,add it to the db.json file,nd then return the new note to the client.
+    app.post("/api/notes",function (req,res) {
+        fs.readFile("db/db.json","utf-8",(err,data) => {
+            if(err) throw err;
+
+            let notes = JSON.parse(data);
+
+            let newNote = req.body;
+            let uniueId = (notes.length).toString();
+            newNote.id = uniueId;
+            console.log(newNote);
+            notes.push(newNote);
+
+            fs.writeFileSync("db/db.json",JSON.stringify(notes), "utf-8", (err,data) => {
+                if(err) throw err;
+                console.log("New note successfully added!");
+            });
+
+            res.json(notes);
+        });
+    });
+
 }
