@@ -12,6 +12,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('pubic'));
 
+//routers
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
+
 
 //starts server to begin listening
 app.listen(PORT,function(){
