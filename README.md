@@ -9,3 +9,29 @@ This is for users that need to keep track of a lot of information, it’s easy t
 1. Download or clone repository
 2. Node.js is required to run the application
 3. `npm install` to install the required npm packages
+
+## Usage
+
+* To start using the application, open your browser and go to
+  
+  `http://localhost:3000/`
+
+* screenshot of application
+![](./public/assets/note-taker.png)
+
+* Websites
+  * [Github](https://github.com/goforward-z/note-taker.git)
+  * [Live Heroku App](https://tragically-zed-54086.herokuapp.com/)
+
+## Features
+
+* JavaScript
+* Node.js
+* Express
+
+## License
+
+  Copyright (c) Lepeng z. All rights reserved.
+  
+  Licensed under the [MIT](LICENSE) license.
+  
