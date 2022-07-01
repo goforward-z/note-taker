@@ -9,6 +9,7 @@ module.exports = function (app) {
         fs.readFile("db/db.json","utf-8",(err,data) => {
             if(err) throw err;
             let notes = JSON.parse(data);
+            res.json(notes);
         });
     });
     //post/api/notes - should receive a new note to save on the request body,add it to the db.json file,nd then return the new note to the client.
