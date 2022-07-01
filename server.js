@@ -4,7 +4,7 @@ const path = require('path');
 
 //set up express app
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 
 //sets up the express app to handle data parsing
@@ -13,6 +13,6 @@ app.use(express.json());
 
 
 //starts server to begin listening
-app.listen(port,function(){
+app.listen(PORT,function(){
     console.log("APP listening on PORT" + PORT);
 });
