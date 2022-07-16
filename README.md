@@ -19,6 +19,8 @@ This is for users that need to keep track of a lot of information, it’s easy t
 * screenshot of application
 ![](./public/assets/note-taker.png)
 
+View walk through video via [video Demo](https://drive.google.com/file/d/16xrPqbAuABz5PrCBoi8hjGJ0N25PqlSP/view)
+
 * Websites
   * [Github](https://github.com/goforward-z/note-taker.git)
   * [Live Heroku App](https://tragically-zed-54086.herokuapp.com/)
